@@ -72,9 +72,56 @@ public class Main {
             }
         }
         System.out.printf("Максимальный второй элемент массива = %d и минимальный второй элемент " +
-                        "массивa = %d %n", maxSecondValue, minSecondValue);
+                "массивa = %d %n", maxSecondValue, minSecondValue);
 
         System.out.println("Task 6");
+        int sizeArray = 10;
+        int[] arrayOne = new int[sizeArray];
+        int[] arrayTwo = new int[sizeArray];
+        for (int i = 0; i < sizeArray; i++) {
+            arrayOne[i] = random.nextInt(1, 15);
+            arrayTwo[i] = random.nextInt(1,15);
+        }
+        System.out.println(Arrays.toString(arrayOne));
+        System.out.println(Arrays.toString(arrayTwo));
+        int arraysSameValue = 0;
+        int counterArrays = 0;
+        for (int i = 0; i < sizeArray; i++) {
+            boolean flagSameCheck = false;
+            for (int j = 0; j < sizeArray; j++) {
+                if (arrayOne[i] == arrayTwo[j]){
+                arraysSameValue = arrayTwo[j];
+                flagSameCheck = true;
+                break;
+                }
+            }
+            if (flagSameCheck) {
+                System.out.print(arraysSameValue + " ");
+            }
+        }
 
+        System.out.println("\nTask 7");
+        int sizeDifferentArrays = 10;
+        int[] arrayFirst = new int[sizeDifferentArrays];
+        int[] arraySecond = new int[sizeDifferentArrays];
+        for (int i = 0; i < sizeDifferentArrays; i++) {
+            arrayFirst[i] = random.nextInt(1, 15);
+            arraySecond[i] = random.nextInt(1,15);
+        }
+        System.out.println(Arrays.toString(arrayFirst));
+        System.out.println(Arrays.toString(arraySecond));
+        int arraysDiffrentValue = 0;
+        for (int i = 0; i < sizeDifferentArrays; i++) {
+            boolean flagDiffrentCheck = false;
+            for (int j = 0; j < sizeDifferentArrays; j++) {
+                if (arrayFirst[i] != arraySecond [j]){
+                    arraysDiffrentValue = arrayFirst[i];
+                    flagDiffrentCheck = true;
+                }
+            }
+            if (flagDiffrentCheck){
+                System.out.print(arraysDiffrentValue + " ");
+            }
+        }
     }
 }
