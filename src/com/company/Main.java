@@ -73,5 +73,8 @@ public class Main {
         }
         System.out.printf("Максимальный второй элемент массива = %d и минимальный второй элемент " +
                         "массивa = %d %n", maxSecondValue, minSecondValue);
+
+        System.out.println("Task 6");
+
     }
 }
