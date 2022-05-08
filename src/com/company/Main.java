@@ -80,19 +80,18 @@ public class Main {
         int[] arrayTwo = new int[sizeArray];
         for (int i = 0; i < sizeArray; i++) {
             arrayOne[i] = random.nextInt(1, 15);
-            arrayTwo[i] = random.nextInt(1,15);
+            arrayTwo[i] = random.nextInt(1, 15);
         }
         System.out.println(Arrays.toString(arrayOne));
         System.out.println(Arrays.toString(arrayTwo));
         int arraysSameValue = 0;
-        int counterArrays = 0;
         for (int i = 0; i < sizeArray; i++) {
             boolean flagSameCheck = false;
             for (int j = 0; j < sizeArray; j++) {
-                if (arrayOne[i] == arrayTwo[j]){
-                arraysSameValue = arrayTwo[j];
-                flagSameCheck = true;
-                break;
+                if (arrayOne[i] == arrayTwo[j]) {
+                    arraysSameValue = arrayTwo[j];
+                    flagSameCheck = true;
+                    break;
                 }
             }
             if (flagSameCheck) {
@@ -100,28 +99,46 @@ public class Main {
             }
         }
 
+
         System.out.println("\nTask 7");
         int sizeDifferentArrays = 10;
         int[] arrayFirst = new int[sizeDifferentArrays];
         int[] arraySecond = new int[sizeDifferentArrays];
         for (int i = 0; i < sizeDifferentArrays; i++) {
             arrayFirst[i] = random.nextInt(1, 15);
-            arraySecond[i] = random.nextInt(1,15);
+            arraySecond[i] = random.nextInt(1, 15);
         }
         System.out.println(Arrays.toString(arrayFirst));
         System.out.println(Arrays.toString(arraySecond));
-        int arraysDiffrentValue = 0;
+        int firstDiffrentValue = 0;
+        int seconDifferentValue = 0;
         for (int i = 0; i < sizeDifferentArrays; i++) {
-            boolean flagDiffrentCheck = false;
+            int counterFirstDiffrent = 0;
+            int counterSecondDiffrent = 0;
+            int aa = 0;
+            boolean ttt = false;
             for (int j = 0; j < sizeDifferentArrays; j++) {
-                if (arrayFirst[i] != arraySecond [j]){
-                    arraysDiffrentValue = arrayFirst[i];
-                    flagDiffrentCheck = true;
+                if (arrayFirst[i] == arraySecond[j]) {
+                    counterFirstDiffrent++;
+                    //break;
+                } else {
+                    firstDiffrentValue = arrayFirst[i];
+                }
+                if (arraySecond[i] == arrayFirst[j]) {
+                    counterSecondDiffrent++;
+                    //break;
+                } else {
+                    seconDifferentValue = arraySecond[i];
                 }
             }
-            if (flagDiffrentCheck){
-                System.out.print(arraysDiffrentValue + " ");
+
+            if (counterFirstDiffrent < 1) {
+                System.out.print(firstDiffrentValue + " ");
             }
+            if (counterSecondDiffrent < 1) {
+                System.out.print(seconDifferentValue + " ");
+            }
+
         }
     }
 }
