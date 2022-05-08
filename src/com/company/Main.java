@@ -115,23 +115,18 @@ public class Main {
         for (int i = 0; i < sizeDifferentArrays; i++) {
             int counterFirstDiffrent = 0;
             int counterSecondDiffrent = 0;
-            int aa = 0;
-            boolean ttt = false;
             for (int j = 0; j < sizeDifferentArrays; j++) {
                 if (arrayFirst[i] == arraySecond[j]) {
                     counterFirstDiffrent++;
-                    //break;
                 } else {
                     firstDiffrentValue = arrayFirst[i];
                 }
                 if (arraySecond[i] == arrayFirst[j]) {
                     counterSecondDiffrent++;
-                    //break;
                 } else {
                     seconDifferentValue = arraySecond[i];
                 }
             }
-
             if (counterFirstDiffrent < 1) {
                 System.out.print(firstDiffrentValue + " ");
             }
