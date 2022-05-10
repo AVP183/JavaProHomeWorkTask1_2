@@ -6,6 +6,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
+        //1. Посчитать среднее арифметическое массива чисел.
         System.out.println("Task 1");
         int size = 10;
         int avgArraySum = 0;
@@ -22,7 +23,7 @@ public class Main {
         avgArraySum = resault / size;
         System.out.println("Cреднее арифметическое массива чисел " + avgArraySum);
 
-
+//2. Найти максимальный и минимальный элементы массива.
         System.out.println("Task 2");
         int maxValue = arraySumFigure[0];
         int minValue = arraySumFigure[0];
@@ -37,7 +38,7 @@ public class Main {
         System.out.printf("Максимальный элемент массива = %d и минимальный элемент массивa = %d %n", maxValue,
                 minValue);
 
-
+//3. Найти повторяющиеся элементы в массиве.
         System.out.println("Task 3");
         int[] foundRepeatValues = new int[8];
         for (int i = 0; i < foundRepeatValues.length; i++) {
@@ -54,7 +55,8 @@ public class Main {
             }
         }
 
-
+//4. Найти второе наибольшее значение в массиве.
+//5. Найти второе наименьшее значение в массиве.
         System.out.println("Task 4, 5");
         int maxSecondValue = arraySumFigure[0];
         int minSecondValue = arraySumFigure[0];
@@ -74,6 +76,8 @@ public class Main {
         System.out.printf("Максимальный второй элемент массива = %d и минимальный второй элемент " +
                 "массивa = %d %n", maxSecondValue, minSecondValue);
 
+
+//6. Найти повторяющиеся значения в двух массивах.
         System.out.println("Task 6");
         int sizeArray = 10;
         int[] arrayOne = new int[sizeArray];
@@ -100,6 +104,7 @@ public class Main {
         }
 
 
+//7. Найти не повторяющиеся значения в двух массивах.
         System.out.println("\nTask 7");
         int sizeDifferentArrays = 10;
         int[] arrayFirst = new int[sizeDifferentArrays];
@@ -133,7 +138,6 @@ public class Main {
             if (counterSecondDiffrent < 1) {
                 System.out.print(seconDifferentValue + " ");
             }
-
         }
     }
 }
